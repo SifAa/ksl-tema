@@ -1,0 +1,48 @@
+
+/* prøver at lave en full screen mobbil menu, men har nogle bugs */
+
+
+.main-navigation div {
+  position: fixed;
+  display: none;
+  top: 251px; /* for at kunne se knappen */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9999;
+}
+.toggled.main-navigation div {
+  display: block;
+}
+.main-navigation div ul {
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  /*! overflow-y: auto; */
+}
+.toggled.main-navigation div ul li {
+  width: 100%;
+}
+#site-navigation ul ul {
+  position: static;
+  display: block;
+  box-shadow: none;
+  /*! transform: translateX(100%); */
+  transition: transform 0.7s;
+  z-index: 999;
+  background: #fff;
+  width: 100%;
+}
+#site-navigation li.menu-item-has-children.focus > ul {
+  display: block;
+  transform: translateX(0);
+}
+#site-navigation li {
+  position: relative;
+  width: 100%;
+  clear: both;
+}

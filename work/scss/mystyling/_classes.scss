@@ -1,0 +1,172 @@
+// My styling classes
+
+/* Styling classes
+--------------------------------------------- */
+
+// Button
+.btn-primary a {
+    @include btn;
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+        color: $white;
+        background-color: $green;
+    }
+}
+
+// Text styling
+
+.text-center {
+    text-align: center;
+}
+.mf-center {
+    text-align: center;
+}
+
+.text-warning {
+    color: $warning;
+}
+
+.text-half {
+    font-size: 14px;
+
+    p:not(.btn-primary) {
+        margin: 0;
+    }
+}
+
+// Spacing
+.m-0 {
+    margin: 0;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.ml-col {
+    margin-left: $colgap;
+}
+.mt-col {
+    margin-top: $colgap;
+}
+
+// Billeder
+
+.img-w-text {
+    margin-bottom: 0;
+}
+.img-text {
+    margin: 0 auto;
+    font-size: 0.85rem;
+}
+
+// Bokse
+.mf-box {
+    text-align: center;
+    position: relative;
+
+    h3 {
+        margin: 1rem auto;
+    }
+
+    figure {
+        margin: 0 auto;
+    }
+}
+
+.mf-box.arrangementer p {
+    margin-bottom: 0;
+}
+
+.box-mf {
+    h3 {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.con-box {
+    background-color: $grey;
+    
+
+    figure {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3 {
+        line-height: 1.2em;
+        margin: 7px 0 10px 0;
+        text-align: center;
+    }
+}
+
+.bsp-text {
+    p:nth-child(2) {
+        margin: 0.15rem 0 0;
+    }
+}
+.bsp-img, .bsp-img-to {
+    img {
+        height: max-content;
+        height: -moz-available;
+        margin: 0 auto;
+        display: flex;
+    }
+}
+.best-img {
+    margin: 0;
+    img {
+        margin: 0 auto;
+        display: flex;
+    }
+}
+.best-text {
+    margin-top: 0;
+}
+
+// flere links i span
+span.adresse:hover a {
+    color: $green !important;
+}
+
+
+@media screen and (min-width: 768px){
+    .text-col {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: $colgap;
+        -moz-column-gap: $colgap;
+        column-gap: $colgap;
+    }
+    .mf-center {
+        text-align: left;
+    }
+
+    .box-mf {
+        :first-child {
+            margin-top: 0;
+        }
+    }
+
+    .mt-m-col {
+        margin-top: $colgap;
+    }
+
+    .bsp-img {
+        img {
+            width: 100%;
+            margin: 0.25rem 0 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mt-l-5 {
+        margin-top: 4.5rem;
+    }
+}

@@ -1,0 +1,189 @@
+/* Footer
+--------------------------------------------- */
+footer#colophon {
+    color: $white;
+    background-color: $secondary;
+    border-top: 5px $primary-border;
+    min-height: $footer-height;
+    justify-content: space-around;
+    margin-top: 10px;
+    position: relative;
+    z-index:5;
+    margin-bottom: $sidemenu-height;
+    overflow: hidden;
+
+    a {
+        color: $primary;
+
+        &:hover {
+            color: $green;
+        }
+    }
+    a.fb{
+        &:hover {
+            color: $facebook;
+
+            &::before {
+                color: $facebook;
+            }
+        }
+        &::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            display: block;
+            content: '\f082';
+            font-size: 25px;
+            text-align: center;
+            color: white;
+        }
+    }
+}
+.footer-widgets {
+    max-width: 98%;
+    margin: 0 auto;
+    width: calc(1140px + var(--gap));
+
+    .widget {
+        margin: $colmargin;
+        @extend .m-ksl-col-6;
+        @extend .l-ksl-col-3;
+    }
+    #text-3 {
+        @extend .l-ksl-col-2;
+    }
+    #text-4 {
+        @extend .l-ksl-col-4;
+    }
+
+    .textwidget {
+        margin: 0 6vw;
+    }
+
+    #text-3 .textwidget {
+        display: flex;
+    }
+
+    #text-4 .textwidget p:first-child {
+        -webkit-column-span: all; 
+         column-span: all;
+        margin-bottom: 0.1rem;
+      }
+}
+
+/* Side menu fra 768px
+I bunden ellers
+--------------------------------------------- */
+
+.side-menu {
+    position: fixed;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: $primary;
+    height: $sidemenu-height;
+
+    .widget {
+        margin: 0;
+    }
+
+    .textwidget.custom-html-widget {
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
+    
+    span {
+        display: inline-flex;
+        text-align: center;
+        width:49%;
+
+        a {
+            display: inline-block;
+            color: #fff;
+            width: 100%;
+            height: auto;
+            min-height: 2px;
+            background-color: $primary;
+            -webkit-transition: all 200ms linear 0s;
+            -moz-transition: all 200ms linear 0s;
+            -o-transition: all 200ms linear 0s;
+            transition: all 200ms linear 0s;
+            -webkit-transition-property: background-color, color;
+            -moz-transition-property: background-color, color;
+            -o-transition-property: background-color, color;
+            transition-property: background-color, color;
+            padding: 10px 0;
+            line-height: 1.25;
+            font-size: 12px;
+
+            &:hover{
+                background-color: $green;
+            }
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                display: block;
+                content: '\f0e0';
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer#colophon {
+        margin-bottom: 0;
+    }
+
+    #text-3 .textwidget {
+        justify-content: end;
+        width: 100%;
+    }
+
+    #text-4 .textwidget {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+
+        p:not(:first-child) {
+            margin: 0;
+        }
+    }
+
+    .footer-widgets .textwidget {
+        margin: 0;
+    }
+
+    .side-menu {
+        position: fixed;
+        right: 0;
+        top: 35%;
+        bottom: auto;
+        width: auto;
+        background-color: transparent;
+        height: auto;
+
+        .textwidget.custom-html-widget {
+            display: block;
+        }
+        
+        span {
+            display: block;
+            width: 70px;
+    
+            a {
+                border-radius: 5px 0 0 5px;
+                border-style: none;
+                box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+  
+  

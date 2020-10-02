@@ -1,0 +1,16 @@
+// General theme outline from underscores
+@import "../underscores/s";
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+// My styles
+@import "variables";
+@import "mixins";
+@import "grid";
+@import "layout";
+@import "header";
+@import "footer";
+@import "classes";
+@import "overrides";
+@import "slider";

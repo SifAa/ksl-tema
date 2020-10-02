@@ -1,0 +1,205 @@
+// My layout
+
+/* Page
+--------------------------------------------- */
+body {
+    font-family: $primary-font;
+}
+
+#page {
+    overflow: hidden;
+    min-height: calc(100vh - #{$footer-height});
+    padding-bottom: 1rem;
+}
+
+.post, .page {
+    margin: 0;
+}
+
+main#primary article {
+    max-width: 100%;
+    margin-left: 0;
+
+    .entry-content.text-col {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Links
+--------------------------------------------- */
+a {
+    color: $primary;
+    text-decoration: none;
+    
+    &:hover {
+        color: $green;
+        text-decoration: none;
+    }
+    &:active, &:visited  {
+        outline: 0;
+    }
+}
+
+
+/* Headlines
+--------------------------------------------- */
+.text-col h1, 
+.text-col h2, 
+.text-col h3, 
+.text-col h4 {
+    -webkit-column-span: all; 
+    column-span: all;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $secondary-font;
+}
+
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top:0
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.15em;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+h5 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+h6 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.entry-header {
+    width: 100%;
+    
+}
+
+.underline-titel, h1.entry-title {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $primary;
+        margin-top: -5px;
+    }
+}
+.underline-titel {
+    margin: 0;
+}
+
+#post-329 .entry-header {
+  text-align: center;
+}
+#post-329 h1.entry-title:after {
+  display: none;
+}
+
+/* Lists
+--------------------------------------------- */
+ul, ol {
+    margin: 0;
+}
+
+/* Homepage
+--------------------------------------------- */
+.home .entry-header h1.entry-title {
+    display: none;
+}
+
+.home-titel {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 3px;
+        background-color: $primary;
+        position: absolute;
+        left: 10%;
+    }
+}
+
+/* Wordpress blocks
+--------------------------------------------- */
+.wp-block-group__inner-container {
+    width: 100%;
+}
+
+
+/* Tables
+--------------------------------------------- */
+.pris-table, .ven-table {
+    max-width: 96%;
+    font-size: 14px;
+
+    table {
+        margin: 0;
+        border-collapse: collapse;
+
+        td {
+            border-bottom: 1px solid $darkgrey;
+            padding: 0.5rem 0;
+          }
+      }
+  }
+  .ven-table {
+      width: 100%;
+      table td {
+          border: none;
+      }
+  }
+
+
+  @media screen and (min-width: 576px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.75em;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
+    h5 {
+        font-size: 1.25em;
+    }
+    h6 {
+        font-size: 1em;
+    }
+
+    .pris-table {
+          font-size: 1rem;
+    }
+  }

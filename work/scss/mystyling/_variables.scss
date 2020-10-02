@@ -1,0 +1,27 @@
+// my variables
+
+// Fonts
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Rajdhani', sans-serif;
+
+// Colors
+$primary: #018C01;
+$secondary: #000;
+$white: #fff;
+$green: #b8c625;
+$warning: red;
+$facebook: #4267B2;
+$grey: #F5F5F5;
+$darkgrey: #cdcdcd;
+$opaque-green: rgba(65, 88, 0, 0.4);
+
+// Border
+$primary-border: solid $primary;
+
+// Grid
+$colgap: 30px;
+$colmargin: var(--gap) 0 0 var(--gap);
+
+// sizing
+$footer-height: 228px;
+$sidemenu-height: 50px;
